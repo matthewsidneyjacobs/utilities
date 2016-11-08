@@ -16,19 +16,19 @@ var _ = { };
   // Return an array of the first n elements of an array. If n is undefined,
   // return just the first element.
   _.first = function(array, n) {
-    // var resultArr = [];
-    // if (typeOf(n) !== "number") {
-    //   return array[0];
-    // }
-    // else if (n > array.length) {
-    //   return array;
-    // }
-    // else {
-    //   for (var i = 0; i < array.length; i++) {
-    //     resultArr.push(array[i]);
-    //   }
-    //   return resultArr;
-    // }
+    var resultArr = [];
+    if (typeof(n) !== "number") {
+      return array[0];
+    }
+    else if (n > array.length) {
+      return array;
+    }
+    else if (n>=1 || n< array.length){
+      for (var i = 0; i < n; i++) {
+        resultArr.push(array[i]);
+      }
+      return resultArr;
+    }
   };
 
   // Like first, but for the last elements. If n is undefined, return just the
